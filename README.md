@@ -1,5 +1,5 @@
 # COURSENAME
-This is the repository for the LinkedIn Learning course [COURSENAME]. The full course is available from [LinkedIn Learning](LICOURSEURL).
+This is the repository for the LinkedIn Learning course `Ten tips for the C# developer`. The full course is available from [LinkedIn Learning](LICOURSEURL).
 
 [![COURSENAME](COURSEIMAGE)](LICOURSEURL)
 
