@@ -1,0 +1,13 @@
+C:\Users\WR\Source\Repos\Tips-CSharp-2863044\source\TipsConsole\bin\Debug\netcoreapp3.1\TipsConsole.exe
+C:\Users\WR\Source\Repos\Tips-CSharp-2863044\source\TipsConsole\bin\Debug\netcoreapp3.1\TipsConsole.deps.json
+C:\Users\WR\Source\Repos\Tips-CSharp-2863044\source\TipsConsole\bin\Debug\netcoreapp3.1\TipsConsole.runtimeconfig.json
+C:\Users\WR\Source\Repos\Tips-CSharp-2863044\source\TipsConsole\bin\Debug\netcoreapp3.1\TipsConsole.runtimeconfig.dev.json
+C:\Users\WR\Source\Repos\Tips-CSharp-2863044\source\TipsConsole\bin\Debug\netcoreapp3.1\TipsConsole.dll
+C:\Users\WR\Source\Repos\Tips-CSharp-2863044\source\TipsConsole\bin\Debug\netcoreapp3.1\TipsConsole.pdb
+C:\Users\WR\Source\Repos\Tips-CSharp-2863044\source\TipsConsole\obj\Debug\netcoreapp3.1\TipsConsole.AssemblyInfoInputs.cache
+C:\Users\WR\Source\Repos\Tips-CSharp-2863044\source\TipsConsole\obj\Debug\netcoreapp3.1\TipsConsole.AssemblyInfo.cs
+C:\Users\WR\Source\Repos\Tips-CSharp-2863044\source\TipsConsole\obj\Debug\netcoreapp3.1\TipsConsole.csproj.CoreCompileInputs.cache
+C:\Users\WR\Source\Repos\Tips-CSharp-2863044\source\TipsConsole\obj\Debug\netcoreapp3.1\TipsConsole.dll
+C:\Users\WR\Source\Repos\Tips-CSharp-2863044\source\TipsConsole\obj\Debug\netcoreapp3.1\TipsConsole.pdb
+C:\Users\WR\Source\Repos\Tips-CSharp-2863044\source\TipsConsole\obj\Debug\netcoreapp3.1\TipsConsole.genruntimeconfig.cache
+C:\Users\WR\Source\Repos\Tips-CSharp-2863044\source\TipsConsole\obj\Debug\netcoreapp3.1\TipsConsole.csprojAssemblyReference.cache
