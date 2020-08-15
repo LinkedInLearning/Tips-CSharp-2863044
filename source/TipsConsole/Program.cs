@@ -6,7 +6,7 @@ namespace TipsConsole
 	{
 		static void Main(string[] args)
 		{
-			var example = new Example();
+			var example = new Examples();
 			example.ShowExample();
 		}
 	}

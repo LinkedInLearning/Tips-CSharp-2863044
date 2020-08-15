@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TipsConsole", "TipsConsole\TipsConsole.csproj", "{8FF9EA68-168E-4FC7-AA4B-20E56339F949}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BetterIndices", "BetterIndices", "{1CA1D8DA-F641-48B4-8B02-8F763CA396BA}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DigitSeparator", "DigitSeparator", "{1CA1D8DA-F641-48B4-8B02-8F763CA396BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
