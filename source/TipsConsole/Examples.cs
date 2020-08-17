@@ -13,45 +13,56 @@ namespace TipsConsole
 	{
 		public void ShowExample()
 		{
-			
-			MutableStateExample();
-			ImmutableStateExample();
+
+
+			//MutableListExample();
+			ImmutableListExample();
 		}
 
-		private void MutableStateExample()
-		{
-			Console.WriteLine("Mutable Point");
-			var shapePoints = PointSource.GetShapePoints();
-			PrintShape(shapePoints);
-			Console.WriteLine();
-			MoveShape(delta: 10, shapePoints: shapePoints);
-			PrintShape(shapePoints);
-			Console.WriteLine("");
-		}
 
-		public void ImmutableStateExample()
+		public void MutableListExample()
 		{
-			Console.WriteLine("Immutable Point");
+			Console.WriteLine("List<T>");
 			var immutableShapePoints = PointSource.GetImmutableShapePoints();
 			PrintShape(immutableShapePoints);
 			Console.WriteLine();
+			ExpandShapePoints(immutableShapePoints);
 			MoveImmutableShape(delta: 10, shapePoints: immutableShapePoints);
 			PrintShape(immutableShapePoints);
 		}
 
-
-		
-		public void MoveShape(int delta, List<RayPoint> shapePoints)
+		public void ImmutableListExample()
 		{
-			// changing shared state
-			foreach (var point in shapePoints)
-			{
-				point.X += delta;
-				point.Y += delta;
-				point.Z += delta;
-			}
+			Console.WriteLine("ImmutableList<T>");
+			var immutableShapePoints = PointSource.GetImmutableShapePointsAndCollection();
+			PrintShape(immutableShapePoints);
+			Console.WriteLine();
+			immutableShapePoints = ExpandShapeWithImmutable(immutableShapePoints);
+			//MoveImmutableShape(delta: 10, shapePoints: immutableShapePoints);
+			PrintShape(immutableShapePoints);
+		}
 
+		public void ExpandShapePoints(List<ImmutableRayPoint> shapePoints) {
+			// ImmutableRayPoint is immutable
+			// but the List<T> is not.
+			// Therefore it is not thread safe.  Another thread could alter collection
 
+			shapePoints.Add(new ImmutableRayPoint(1000, 2000, 3000)); // add point to list
+			shapePoints.Add(new ImmutableRayPoint(-17, -27, -37)); // add point to list
+			
+		}
+		public void ReduceShapePoints(List<ImmutableRayPoint> shapePoints)
+		{
+			// List<T> is not thread safe.  Another thread could alter collection
+			shapePoints.RemoveAt(0); // remove point
+		}
+
+			public ImmutableList<ImmutableRayPoint> ExpandShapeWithImmutable(ImmutableList<ImmutableRayPoint> shapePoints)
+		{
+			// ImmutableList changes result in a new ImmutableList instance
+
+			// shapePoints = shapePoints.Add(new ImmutableRayPoint(1000, 2000, 3000)); /// add point to list
+			return shapePoints.Add(new ImmutableRayPoint(1000, 2000, 3000)); /// add point to list
 		}
 
 
@@ -73,13 +84,7 @@ namespace TipsConsole
 
 	
 		#region PrintToConsole
-		private void PrintShape(IEnumerable<RayPoint> shapePoints)
-		{
-			foreach (var point in shapePoints)
-			{
-				Console.WriteLine($"X: {point.X}, Y:{point.Y}, Z:{point.Z}");
-			}
-		}
+	
 
 		private void PrintShape(IEnumerable<ImmutableRayPoint> shapePoints)
 		{
