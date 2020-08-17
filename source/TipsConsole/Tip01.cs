@@ -6,7 +6,7 @@ using System.Text;
 
 namespace TipsConsole
 {
-	internal class Example
+	internal class Examples
 	{ 
 		public void ShowExample()
 		{
