@@ -34,9 +34,13 @@ namespace TipsConsole
 
 			// useful for decimal, float and double types
 
-			double anotherNumber = 16.121_232_343_454_565e2;
-
 			decimal bigNumber = 1432M * 135_795_632M;
+			double d1 = 16.121_232_343_454_565e3;
+			double d2 = 16.121_232_343_454_565e12;
+			
+			Console.WriteLine(d1 + d2);
+			Console.WriteLine(bigNumber);
+
 		}
 	}
 
