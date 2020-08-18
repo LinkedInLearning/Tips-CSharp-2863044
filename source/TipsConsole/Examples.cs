@@ -14,20 +14,17 @@ namespace TipsConsole
 	{
 		public void ShowExample()
 		{
-			//SwitchOldSyntax();
-			SwitchOnType();
+			SwitchOldSyntax();
+			// SwitchOnType();
 			// SwitchWithWhen();
 		}
-
-
 
 		private void SwitchOldSyntax()
 		{
 			// C# 7 added the Case pattern
-			// 
 			// now switch statement are not limited to core types
 			// like integers and strings.
-			int number = 25;
+			int number = 23;
 			//  old style
 			switch (number)
 			{
@@ -37,6 +34,15 @@ namespace TipsConsole
 				case 10:
 					break;
 				case 20:
+					break;
+				case 21:
+					break;
+				case 22:
+					break;
+				case 23:
+					Console.WriteLine("23 is the winning number!");
+					break;
+				case 24:
 					break;
 				case 30:
 					break;
