@@ -22,8 +22,9 @@ namespace TipsConsole
 
 			long numA, numB, numC, numD;
 
-			//numA = 222,333,444,555; // nor allowed
-			numA = long.Parse("222,333,444,555", System.Globalization.NumberStyles.Any); // this works, but why have string to long conversion?
+		//	numA = 222,333,444,555; // nor allowed
+			numA = long.Parse("222,333,444,555", System.Globalization.NumberStyles.Any); 
+			// this works, but why have string to long conversion?
 
 			// C# 7 introduces the "_" digit separator
 
@@ -33,7 +34,7 @@ namespace TipsConsole
 
 			// useful for decimal, float and double types
 
-			double anotherNumber = 16.121_232_343_454_565e12;
+			double anotherNumber = 16.121_232_343_454_565e2;
 
 			decimal bigNumber = 1432M * 135_795_632M;
 		}
