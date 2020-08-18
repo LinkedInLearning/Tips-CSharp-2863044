@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\source"
+    "\\Local settings (.vs)",
+    "\\source",
+    "\\source\\TipsConsole",
+    "\\source\\TipsConsole\\bin"
   ],
-  "SelectedNode": "\\source\\TipsForCSharpDevs.sln",
   "PreviewInSolutionExplorer": false
 }
