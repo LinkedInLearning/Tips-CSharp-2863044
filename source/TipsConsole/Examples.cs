@@ -13,10 +13,10 @@ namespace TipsConsole
 			int unusedVariable = 10;
 
 			// the underscore can serve as the discards placeholder
-			// think of discards as a temporary, dummy variables 
-			// that are intentionally unused in application code. 
-			// Discards are equivalent to unassigned variables; 
-			// they do not have a value.
+			// think of a discard as a temporary, dummy variables
+			// that is intentionally unused in application code. 
+			// Discards are equivalent to unassigned variables.
+			// They do not have a value.
 
 
 			// assign an expression to a discard.
