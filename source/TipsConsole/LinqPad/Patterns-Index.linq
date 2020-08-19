@@ -46,4 +46,3 @@ words[lastIndex].Dump("Use Index class: last item");
 
 words[2].Dump("Index= 2");
 words[^2].Dump("Index= ^2");
-// https://www.geeksforgeeks.org/range-and-indices-in-c-sharp-8-0/
