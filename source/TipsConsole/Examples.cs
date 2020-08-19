@@ -30,6 +30,7 @@ namespace TipsConsole
 
 		public void ImmutableListExample()
 		{
+			Console.ForegroundColor = ConsoleColor.Yellow;
 			Console.WriteLine("ImmutableList<T>");
 			var shape = PointSource.GetShapeBetter();
 			PrintShape(shape);
@@ -37,6 +38,7 @@ namespace TipsConsole
 			shape = ExpandShapeBetter(shape);
 			
 			PrintShape(shape);
+			Console.ResetColor();
 		}
 
 		public void ExpandShape(List<ImmutableRayPoint> shapePoints) {
