@@ -1,19 +1,18 @@
-# COURSENAME
-This is the repository for the LinkedIn Learning course `Ten tips for the C# developer`. The full course is available from [LinkedIn Learning](https://linkedin.com/learning).
+# Ten Tips for the C# Developer
+This is the repository for the **LinkedIn** Learning course `Ten tips for the C# developer`. The full course is available from [LinkedIn Learning](https://linkedin.com/learning).
 
-[![COURSENAME](COURSEIMAGE)](LICOURSEURL)
 
-[COURSEDESCRIPTION]
-
+## Tips and Techniques
+Discover tips and techniques that can make working with C# simpler, faster, and more interesting. 
 ## Instructions
-This repository has branches for each of the videos in the course. You can use the branch pop up menu in github to switch to a specific branch and take a look at the course at that stage, or you can add `/tree/BRANCH_NAME` to the URL to go to the branch you want to access.
+This repository has branches for each of the videos in the course. You can use the branch pop up menu in GitHub to switch to a specific branch and take a look at the course at that stage, or you can add `/tree/BRANCH_NAME` to the URL to go to the branch you want to access.
+The instructor uses Visual Studio to change branches.
 
 ## Branches
-The branches are structured to correspond to the videos in the course. The naming convention is `CHAPTER#_MOVIE#`. As an example, the branch named `02_03` corresponds to the second chapter and the third video in that chapter. 
-Some branches will have a beginning and an end state. These are marked with the letters `b` for "beginning" and `e` for "end". The `b` branch contains the code as it is at the beginning of the movie. The `e` branch contains the code as it is at the end of the movie. The `master` branch holds the final state of the code when in the course.
+The branches are structured to correspond to the videos in the course. The naming convention is `Tip##`. As an example, the branch named `Tip02` corresponds to the Tip #2 video. 
+
 
 ## Installing
-1. To use these exercise files, you must have the following installed:
-	- [list of requirements for course]
-2. Clone this repository into your local machine using the terminal (Mac), CMD (Windows), or a GUI tool like SourceTree.
-3. [Course-specific instructions]
+1. For this course the instructor uses Visual Studio 2019, any edition is sufficient (Community, Professional, Enterprise). 
+2. LINQPad is another tool shown in this course.  Get a free copy at [Linqpad.net](https://linqpad.net)
+3. Clone this repository into your local machine using the terminal (Mac), CMD (Windows), or a GUI tool like Visual Studio or SourceTree.
