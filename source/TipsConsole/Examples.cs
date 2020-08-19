@@ -13,12 +13,9 @@ namespace TipsConsole
 	{
 		public void ShowExample()
 		{
-
-
 			//MutableListExample();
 			ImmutableListExample();
 		}
-
 
 		public void MutableListExample()
 		{
@@ -45,7 +42,8 @@ namespace TipsConsole
 		public void ExpandShapePoints(List<ImmutableRayPoint> shapePoints) {
 			// ImmutableRayPoint is immutable
 			// but the List<T> is not.
-			// Therefore it is not thread safe.  Another thread could alter collection
+			// Therefore it is not thread safe.  
+			// Another thread could alter collection
 
 			shapePoints.Add(new ImmutableRayPoint(1000, 2000, 3000)); // add point to list
 			shapePoints.Add(new ImmutableRayPoint(-17, -27, -37)); // add point to list
@@ -53,7 +51,8 @@ namespace TipsConsole
 		}
 		public void ReduceShapePoints(List<ImmutableRayPoint> shapePoints)
 		{
-			// List<T> is not thread safe.  Another thread could alter collection
+			// List<T> is not thread safe.  
+			// Another thread could alter collection
 			shapePoints.RemoveAt(0); // remove point
 		}
 
