@@ -52,7 +52,7 @@ namespace TipsConsole
 			shapePoints.Add(new ImmutableRayPoint(-17, -27, -37));
 			
 		}
-		public void ReduceShapePoints(List<ImmutableRayPoint> shapePoints)
+		public void ReduceShape(List<ImmutableRayPoint> shapePoints)
 		{
 			// List<T> is not thread safe.  
 			// Another thread could alter collection
