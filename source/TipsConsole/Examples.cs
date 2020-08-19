@@ -13,40 +13,41 @@ namespace TipsConsole
 	{
 		public void ShowExample()
 		{
-			//MutableListExample();
+			MutableListExample();
 			ImmutableListExample();
 		}
 
 		public void MutableListExample()
 		{
 			Console.WriteLine("List<T>");
-			var immutableShapePoints = PointSource.GetImmutableShapePoints();
-			PrintShape(immutableShapePoints);
+			var shape = PointSource.GetShape();
+			PrintShape(shape);
 			Console.WriteLine();
-			ExpandShapePoints(immutableShapePoints);
-			MoveImmutableShape(delta: 10, shapePoints: immutableShapePoints);
-			PrintShape(immutableShapePoints);
+			ExpandShape(shape);
+			PrintShape(shape);
+			Console.WriteLine();
 		}
 
 		public void ImmutableListExample()
 		{
 			Console.WriteLine("ImmutableList<T>");
-			var immutableShapePoints = PointSource.GetImmutableShapePointsAndCollection();
-			PrintShape(immutableShapePoints);
+			var shape = PointSource.GetShapeBetter();
+			PrintShape(shape);
 			Console.WriteLine();
-			immutableShapePoints = ExpandShapeWithImmutable(immutableShapePoints);
-			//MoveImmutableShape(delta: 10, shapePoints: immutableShapePoints);
-			PrintShape(immutableShapePoints);
+			shape = ExpandShapeBetter(shape);
+			
+			PrintShape(shape);
 		}
 
-		public void ExpandShapePoints(List<ImmutableRayPoint> shapePoints) {
+		public void ExpandShape(List<ImmutableRayPoint> shapePoints) {
 			// ImmutableRayPoint is immutable
 			// but the List<T> is not.
 			// Therefore it is not thread safe.  
 			// Another thread could alter collection
 
-			shapePoints.Add(new ImmutableRayPoint(1000, 2000, 3000)); // add point to list
-			shapePoints.Add(new ImmutableRayPoint(-17, -27, -37)); // add point to list
+			// add points to list
+			shapePoints.Add(new ImmutableRayPoint(1000, 2000, 3000)); 
+			shapePoints.Add(new ImmutableRayPoint(-17, -27, -37));
 			
 		}
 		public void ReduceShapePoints(List<ImmutableRayPoint> shapePoints)
@@ -56,32 +57,15 @@ namespace TipsConsole
 			shapePoints.RemoveAt(0); // remove point
 		}
 
-			public ImmutableList<ImmutableRayPoint> ExpandShapeWithImmutable(ImmutableList<ImmutableRayPoint> shapePoints)
+			public ImmutableList<ImmutableRayPoint> ExpandShapeBetter(ImmutableList<ImmutableRayPoint> shapePoints)
 		{
 			// ImmutableList changes result in a new ImmutableList instance
 
-			// shapePoints = shapePoints.Add(new ImmutableRayPoint(1000, 2000, 3000)); /// add point to list
-			return shapePoints.Add(new ImmutableRayPoint(1000, 2000, 3000)); /// add point to list
+			// prior example
+			// shapePoints = shapePoints.Add(new ImmutableRayPoint(1000, 2000, 3000)); 
+			return shapePoints.Add(new ImmutableRayPoint(1000, 2000, 3000)); 
 		}
 
-
-
-		public void MoveImmutableShape(int delta, List<ImmutableRayPoint> shapePoints)
-		{
-			// changing shared state
-			for (int counter = 0; counter < shapePoints.Count(); counter++)
-			{
-				//point.X += delta;
-				//point.Y += delta;
-				//point.Z += delta;
-					var point = shapePoints[counter];
-				 shapePoints[counter] = point.Update(point.X + delta, point.Y + delta, point.Z + delta);
-			
-			}
-		}
-
-
-	
 		#region PrintToConsole
 	
 

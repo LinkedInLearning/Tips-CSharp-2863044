@@ -8,7 +8,7 @@ namespace TipsConsole
 	public static class PointSource
 	{
 
-		public static List<ImmutableRayPoint> GetImmutableShapePoints()
+		public static List<ImmutableRayPoint> GetShape	()
 		{
 			var shape = new List<ImmutableRayPoint>();
 			var point = new ImmutableRayPoint(x: 2, y: 5, z: 100);
@@ -20,7 +20,7 @@ namespace TipsConsole
 			return shape;
 		}
 
-		public static ImmutableList<ImmutableRayPoint> GetImmutableShapePointsAndCollection()
+		public static ImmutableList<ImmutableRayPoint> GetShapeBetter()
 		{
 			ImmutableList<ImmutableRayPoint> shape ;
 			shape = ImmutableList.Create( new ImmutableRayPoint(x: 2, y: 5, z: 100)); // one point
