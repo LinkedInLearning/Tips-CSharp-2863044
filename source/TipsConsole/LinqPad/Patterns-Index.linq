@@ -6,7 +6,7 @@
 //The main purpose of introducing slicing into the language is to make working with arrays and strings easier.
 // There is limited support for slicing in collections, use LINQ instead.
 
-var words = new List<string>
+var words = new string[]
 {
                    // index from start    index from end
     "zero",       // 0                    ^10
@@ -22,7 +22,7 @@ var words = new List<string>
 };                // 10 (or words.Length) ^0
 
 words[0].Dump("Old Style: first item"); // use index value to get first item
-words[words.Count - 1].Dump("Old Style: Last item"); // get last item
+words[words.Length - 1].Dump("Old Style: Last item"); // get last item
 
 "--------------------".Dump();
 
