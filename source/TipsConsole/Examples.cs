@@ -10,6 +10,7 @@ namespace TipsConsole
 	{
 		public void ShowExample()
 		{
+			int unusedVariable = 10;
 
 			// the underscore can serve as the discards placeholder
 			// think of discards as a temporary, dummy variables 
