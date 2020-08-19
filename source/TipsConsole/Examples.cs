@@ -12,9 +12,12 @@ namespace TipsConsole
 			// example from the Functional Patterns for C# developers 
 
 			var currentProduct = new Product(productName: "Microphone", retailPrice: 200M);
-			var salePriceA = GetProductPrice(product: currentProduct, quantity: 12, isPremiumCustomer: true);
+			var salePriceA = GetProductPrice(product: currentProduct, 
+																			 quantity: 12, isPremiumCustomer: true);
 
-			var salePriceB = GetProductPriceByExpression(product: currentProduct, quantity: 12, isPremiumCustomer: true);
+			var salePriceB = GetProductPriceByExpression(product: currentProduct, 
+																										quantity: 12, 
+																										isPremiumCustomer: true);
 		}
 
 		#region If Statements
@@ -28,7 +31,6 @@ namespace TipsConsole
 			if (quantity > 10)
 			{
 				// state mutation
-				// possible race condition
 				discountAmount += .15M;
 			}
 			if (isPremiumCustomer)
@@ -36,7 +38,6 @@ namespace TipsConsole
 				discountAmount += .05M;
 			}
 			return product.RetailPrice * (1 - discountAmount);
-
 
 		}
 		public decimal GetProductPriceByExpression(Product product, int quantity, bool isPremiumCustomer)
@@ -46,31 +47,16 @@ namespace TipsConsole
 			
 			// expression version
 			// In this version there is no mutation of variable, and also the code is more compact.
-
-
-
 			decimal discountAmount = (quantity > 10 ? .15M : 0) + (isPremiumCustomer ? .05M : 0);
-
 			return product.RetailPrice * (1 - discountAmount);
 
-			// another benefit expressions are more composable
+			// another benefit,  expressions are more composable
 
 		}
 		#endregion
 	
 		#region Types
-		public enum StandardColors
-		{
-			Red,
-			Orange,
-			Yellow,
-			Green,
-			Blue,
-			Indigo,
-			Violet,
-			Black,
-			White
-		}
+
 	}
 	public class Product
 	{
